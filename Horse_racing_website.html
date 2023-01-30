@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Horse Racing Tracks</title>
+  </head>
+  <body>
+    <h1>Select a Horse Racing Track:</h1>
+    <select id="track-selector">
+      <option value="santa-anita">Santa Anita</option>
+      <option value="belmont">Belmont Park</option>
+      <option value="churchill-downs">Churchill Downs</option>
+    </select>
+    <br><br>
+    <div id="track-info"></div>
+  </body>
+  <script>
+    const trackSelector = document.querySelector("#track-selector");
+    const trackInfo = document.querySelector("#track-info");
+
+    trackSelector.addEventListener("change", function() {
+      const selectedTrack = trackSelector.value;
+      let trackData;
+
+      switch (selectedTrack) {
+        case "santa-anita":
+          trackData = "Santa Anita is a horse racing track located in Arcadia, California.";
+          break;
+        case "belmont":
+          trackData = "Belmont Park is a horse racing track located in Elmont, New York.";
+          break;
+        case "churchill-downs":
+          trackData = "Churchill Downs is a horse racing track located in Louisville, Kentucky.";
+          break;
+        default:
+          trackData = "Please select a horse racing track.";
+      }
+
+      trackInfo.innerHTML = trackData;
+    });
+  </script>
+</html>

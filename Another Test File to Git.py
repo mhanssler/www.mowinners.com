@@ -6,5 +6,5 @@ import pandas as pd
 data = r'C:\Users\mhans\PycharmProjects\www.mowinners.com\cities.csv'
 df = pd.read_csv(data)
 print(df.head)
-#frame = pd.DataFrame(data)
-#print(frame)
+frame = pd.DataFrame(data)
+print(frame)
